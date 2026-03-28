@@ -11,11 +11,11 @@ public class CargoAuditLogger {
         try {
             // Simula uma operação de I/O demorada, como enviar para um serviço externo de RH ou log de auditoria
             Thread.sleep(2000); // 2 segundos de atraso
-            log.info("AUDITORIA ASSÍNCRONA: Novo cargo criado - ID: {}, Nome: {}", cargo.getId(), cargo.getNome());
+            log.info("AUDITORIA ASSÍNCRONA: Novo cargo criado - ID: {}, Nome: {}", cargo.getId(), cargo.getNomeCargo());
             // Aqui poderia haver a lógica para integração com RH ou sistema de auditoria externa
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            log.error("Erro durante o log de auditoria assíncrono para o cargo {}: {}", cargo.getNome(), e.getMessage());
+            log.error("Erro durante o log de auditoria assíncrono para o cargo {}: {}", cargo.getNomeCargo(), e.getMessage());
         }
     }
 }

@@ -16,4 +16,5 @@ public class Cargo {
 
     @Column(columnDefinition = "TEXT")
     private String descricao;
+
 }
